@@ -9,16 +9,8 @@ export let screenOptions = {
   },
 
   headerStyle: {
-    backgroundColor: 'transparent',
+    backgroundColor: 'Gray',
   },
-  // headerLeft: () => {
-  //   return (
-  //     <Image
-  //       style={{marginLeft: 24, height: 35, width: 30}}
-  //       source={Images.icLeft}
-  //     />
-  //   );
-  // },
   headerRight: () => {
     return <Image style={{marginRight: 15}} source={Images.icaccountLogo} />;
   },
