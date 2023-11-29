@@ -1,5 +1,13 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text, TouchableOpacity, StyleSheet, Alert} from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  Alert,
+  SafeAreaView,
+} from 'react-native';
+import styles from './styles';
 
 const ColorGame = () => {
   const [colors, setColors] = useState([
@@ -38,56 +46,28 @@ const ColorGame = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.heading}>Color's Game</Text>
-      <Text style={styles.scoreText}>Score: {score}</Text>
+    <SafeAreaView>
+      <View style={styles.container}>
+        <Text style={styles.heading}>Color's Game</Text>
+        <Text style={styles.scoreText}>Score: {score}</Text>
 
-      <View style={styles.colorContainer}>
-        {colors.map((color, index) => (
-          <TouchableOpacity
-            key={index}
-            style={[styles.colorButton, {backgroundColor: color.hex}]}
-            onPress={() => handleColorPress(color.name)}
-          />
-        ))}
+        <View style={styles.colorContainer}>
+          {colors.map((color, index) => (
+            <TouchableOpacity
+              key={index}
+              style={[styles.colorButton, {backgroundColor: color.hex}]}
+              onPress={() => handleColorPress(color.name)}
+            />
+          ))}
+        </View>
+
+        <Text style={styles.targetText}>
+          Match the color: {targetColor.name}
+        </Text>
       </View>
-
-      <Text style={styles.targetText}>Match the color: {targetColor.name}</Text>
-    </View>
+      <Text style={styles.bottomText}>More</Text>
+    </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  scoreText: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginBottom: 20,
-  },
-  colorContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    marginBottom: 20,
-  },
-  colorButton: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-  },
-  targetText: {
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  heading: {
-    color: 'white',
-    fontSize: 25,
-    fontWeight: '900',
-    marginBottom: 20,
-  },
-});
 
 export default ColorGame;

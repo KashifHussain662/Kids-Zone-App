@@ -52,10 +52,4 @@ export default StyleSheet.create({
     fontSize: 17,
     backgroundColor: 'green',
   },
-  game_container: {
-    backgroundColor: 'rgba(5, 5, 5, 0.78)',
-    margin: 20,
-    padding: 5,
-    borderRadius: 12,
-  },
 });

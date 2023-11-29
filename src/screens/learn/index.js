@@ -17,11 +17,7 @@ const Learn = () => (
       <Image source={Images.icSearch} />
       <TextInput placeholder="search here" style={styles.Input_View} />
     </View>
-    {/* <View style={styles.header}>
-      <Text style={styles.heading}>Hello</Text>
-      <Image source={Images.icaccountLogo} />
-    </View> */}
-    {/* <Text style={styles.heading}>Learning Page</Text> */}
+
     <FlatList
       data={data}
       renderItem={({item}) => (

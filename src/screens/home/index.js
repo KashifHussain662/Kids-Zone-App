@@ -48,7 +48,7 @@ const Home = () => {
                   style={{
                     paddingBottom: 300,
                   }}>
-                  <View style={styles.game_container}>
+                  <View>
                     <ColorGame />
                   </View>
                 </View>,
