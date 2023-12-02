@@ -22,7 +22,7 @@ const Learn = () => (
       data={data}
       renderItem={({item}) => (
         <View style={styles.Learn}>
-          <View>{item.Image} </View>
+          <View>{item.Image}</View>
           <View>
             <Text style={styles.FlatListtxt}>{item.title}</Text>
           </View>
