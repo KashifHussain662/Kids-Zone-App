@@ -12,7 +12,7 @@ export default StyleSheet.create({
   },
   button: {
     backgroundColor: 'yellow',
-    paddingHorizontal: 100,
+    paddingHorizontal: 70,
     paddingVertical: 15,
     margin: 10,
     justifyContent: 'center',
