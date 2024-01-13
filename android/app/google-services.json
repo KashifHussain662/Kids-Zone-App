@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "928828715151",
-    "project_id": "test-auth-6589d",
-    "storage_bucket": "test-auth-6589d.appspot.com"
+    "project_number": "521836376989",
+    "project_id": "kids-zone-auth",
+    "storage_bucket": "kids-zone-auth.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:928828715151:android:689a20bb2547e1c19b80fa",
+        "mobilesdk_app_id": "1:521836376989:android:915bfc0a1d7f9593c53574",
         "android_client_info": {
           "package_name": "com.kidszone"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyC4i9HTKy2CH_nHm-2mFgtBdjLZDW_Gjzs"
+          "current_key": "AIzaSyBsBD--XkDPfBUduKbgn03efqGd3rAT12o"
         }
       ],
       "services": {
