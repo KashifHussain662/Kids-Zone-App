@@ -9,6 +9,7 @@ export default StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    padding: 16,
   },
   heading: {
     color: 'white',
@@ -38,7 +39,7 @@ export default StyleSheet.create({
   state_container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingHorizontal: 17,
+    marginTop: 15,
   },
 
   stateheading: {

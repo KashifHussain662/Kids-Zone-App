@@ -12,71 +12,73 @@ import auth from '@react-native-firebase/auth';
 
 import {Images} from '../../theme';
 import styles from './styles';
-import Tabs from '../../routes/tabs';
-import {showToast} from '../../utility';
+// import Tabs from '../../routes/tabs';
+// import {showToast} from '../../utility';
 
 const LogIn = ({navigation}) => {
   // email,password state
+  // const [email, setemail] = useState(__DEV__ ? 'kashif@gmail.com' : '');
+  // const [password, setpassword] = useState(__DEV__ ? 'abc123' : '');
 
-  const [email, setemail] = useState(__DEV__ ? 'kashif@gmail.com' : '');
-  const [password, setpassword] = useState(__DEV__ ? 'abc123' : '');
+  // // create code
 
-  // create code
+  // const userCreate = () => {
+  //   auth()
+  //     .createUserWithEmailAndPassword(email, password)
+  //     .then(res => {
+  //       console.log('User account created & signed in!');
+  //     })
+  //     .catch(error => {
+  //       showToast({message: 'That email address is already in use!'});
+  //       if (error.code === 'auth/email-already-in-use') {
+  //         showToast({message: 'That email address is already in use!'});
+  //       }
 
-  const userCreate = () => {
-    auth()
-      .createUserWithEmailAndPassword(email, password)
-      .then(res => {
-        console.log('User account created & signed in!');
-      })
-      .catch(error => {
-        showToast({message: 'That email address is already in use!'});
-        if (error.code === 'auth/email-already-in-use') {
-          showToast({message: 'That email address is already in use!'});
-        }
+  //       if (error.code === 'auth/invalid-email') {
+  //         console.log('That email address is invalid!');
+  //       }
 
-        if (error.code === 'auth/invalid-email') {
-          console.log('That email address is invalid!');
-        }
+  //       console.error(error);
+  //     });
+  // };
 
-        console.error(error);
-      });
-  };
+  // // SignIn Codes
 
-  // SignIn Codes
+  // const userSignIn = () => {
+  //   auth()
+  //     .signInWithEmailAndPassword(email, password)
+  //     .then(() => {
+  //       Alert.alert('user logged in');
+  //     })
+  //     .catch(error => {
+  //       console.log(error);
+  //     });
+  // };
 
-  const userSignIn = () => {
-    auth()
-      .signInWithEmailAndPassword(email, password)
-      .then(() => {
-        Alert.alert('user logged in');
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  };
   return (
     <ImageBackground source={Images.iclogIn} style={styles.B_img}>
       <View style={styles.container}>
         <Text style={styles.heading}>LogIn</Text>
         <View style={styles.form}>
           <TextInput
-            value={email}
-            onChangeText={txt => setemail(txt)}
+            // value={email}
+            // onChangeText={txt => setemail(txt)}
             placeholder="Enter Email or Phone Number"
+            placeholderTextColor="gray"
             style={styles.TextInput}
           />
           <TextInput
-            value={password}
-            onChangeText={txt => setpassword(txt)}
+            // value={password}
+            // onChangeText={txt => setpassword(txt)}
+            placeholderTextColor="gray"
             placeholder="Enter Password"
             style={styles.TextInput}
           />
         </View>
         <TouchableOpacity
-          onPress={() => userCreate()}
+          // onPress={() => userCreate()}
           // onPress={userSignIn}
-          // onPress={() => navigation.navigate('Tabs')}
+          onPress={() => navigation.navigate('Tabs')}
           style={styles.button}>
           <Text style={styles.button_txt}>Log In</Text>
         </TouchableOpacity>

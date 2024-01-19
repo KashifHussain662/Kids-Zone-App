@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import {Images} from '../../theme';
 import styles from './styles';
-import {ColorGame, WordPuzzleGame} from './games';
+import {ColorGame} from './games';
 import Cartoons from './cartoons';
 import Rehymes from './rehymes';
 
@@ -23,12 +23,13 @@ const Home = () => {
   };
 
   return (
-    <SafeAreaView style={{backgroundColor: 'rgba(78, 78, 78, 0.66)'}}>
-      <ScrollView horizontal={true} style={{padding: 20}}>
-        <Image source={Images.icBanner1} style={{margin: 5}} />
-        <Image source={Images.icBanner4} style={{margin: 5}} />
-        <Image source={Images.icBanner2} style={{margin: 5}} />
-        <Image source={Images.icBanner3} style={{margin: 5}} />
+    <SafeAreaView
+      style={{backgroundColor: 'rgba(78, 78, 78, 0.66)', padding: 16}}>
+      <ScrollView horizontal={true}>
+        <Image source={Images.icBanner1} style={{marginRight: 10}} />
+        <Image source={Images.icBanner4} style={{marginRight: 10}} />
+        <Image source={Images.icBanner2} style={{marginRight: 10}} />
+        <Image source={Images.icBanner3} style={{marginRight: 10}} />
       </ScrollView>
       <ScrollView>
         <View style={styles.state_container}>
